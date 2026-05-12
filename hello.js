@@ -3,5 +3,5 @@ const math = require("./math"); // here we are importing the math module which w
 console.log("hello! i am js");
 
 
-console.log("Math value is :",math.addFn(2,3));
-console.log("Math value is :",math.subFn(2,3));
+console.log("Math value is :",math.add(2,3));
+console.log("Math value is :",math.sub(2,3));
