@@ -35,4 +35,16 @@ fs.appendFileSync("./test.txt",'${Date.now()} hey there\n'); // here we are addi
 console.log(fs.statSync("./test.txt").size); // here we are using the statSync method to get the statistics of the test.txt file. this method is synchronous, which means that it will block the execution of the code until the statistics are retrieved. if you want to use an asynchronous method, you can use stat method instead of statSync. the statSync method returns an object that contains various properties about the file, such as its size, creation time, and modification time. you can access these properties using dot notation, for example: fs.statSync("./test.txt").size will return the size of the file in bytes. 
 
 //creating a new directory
-fs.mkdirSync('my-docs');
+// fs.mkdirSync('my-docs');
+
+console.log("1");
+
+//non - blocking....
+fs.readFile("contacts.txt","utf-8", (err, result) => {
+    console.log(result);
+});
+
+console.log("2");
+console.log("3");
+console.log("4");
+
