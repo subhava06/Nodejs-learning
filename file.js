@@ -48,3 +48,6 @@ console.log("2");
 console.log("3");
 console.log("4");
 
+
+// Default Thread pool size = 4. we can change the thread pool size by setting the UV_THREADPOOL_SIZE environment variable to a value greater than 4. for example, if we set UV_THREADPOOL_SIZE=8, then the thread pool size will be increased to 8. this can help to improve the performance of the application when there are many asynchronous operations that need to be performed. however, it is important to note that increasing the thread pool size can also lead to increased memory usage and CPU utilization, so it should be done with caution.
+// Max? - if 8 core CPU, then we can set the thread pool size to 8. but it is not recommended to set the thread pool size to a value greater than the number of CPU cores, as it can lead to performance degradation due to context switching between threads. it is generally recommended to set the thread pool size to a value that is equal to or slightly less than the number of CPU cores for optimal performance.
