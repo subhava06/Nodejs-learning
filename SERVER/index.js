@@ -2,10 +2,10 @@
  const http = require('http');
  const fs = require('fs'); // to create log of the incoming requests
 const url = require('url'); // to parse the incoming request url
+const express = require('express'); // to create a server using express framework
 
-
- const myServer = http.createServer((req, res) => {
-   //console.log("New request received");
+function myHandler(req, res) {
+  //console.log("New request received");
    //console.log(req.headers);
    if(req.url === '/favicon.ico') return res.end(); // to ignore the favicon request  
 
@@ -35,7 +35,7 @@ const url = require('url'); // to parse the incoming request url
         case "/signup":
           if(req.method ==="GET") res.end("This is a Signup page");
           else if(req.method === "POST"
-            
+
           ){
             //DB query
             res.end("Signup successful!");
@@ -47,7 +47,8 @@ const url = require('url'); // to parse the incoming request url
        }
 
    });
+}
 
- });//this creates a server object
+ const myServer = http.createServer(myHandler);//this creates a server object
 
  myServer.listen(8000, () => console.log("Server started"));//this tells the server to listen on port 8000
