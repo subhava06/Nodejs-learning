@@ -7,5 +7,8 @@
     "start": "node index"
   },
   "author": "Subhava Ojha",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "url": "^0.11.4"
+  }
 }
