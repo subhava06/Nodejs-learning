@@ -2,11 +2,21 @@
 
 REST API - JSON
 
-GET /users/1 - Get the user with ID 1
-GET /users/2 - Get the user with ID 2
+//for hybrid server
+GET /users - gives HTML document render
+GET /api/users - List all users in JSON format
 
-POST /users - Create new user
+GET //api/users - List all the users -> DONE 
 
-PATCH/user/1 - Edit the user with ID 1
+GET /api/users/1 - Get the user with ID 1 //DONE
+GET /api/users/2 - Get the user with ID 2 //DONE
 
-DELETE /users/1 - Delete the user with ID 1
+Dynamic Path Parameters
+GET /api/users/:id  // colon means it is a dynamic Parameters
+//id -> variable | dynamic
+
+POST /api/users - Create new user
+
+PATCH /api/users/1 - Edit the user with ID 1
+
+DELETE /api/users/1 - Delete the user with ID 1
